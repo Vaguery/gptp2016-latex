@@ -9,7 +9,7 @@ Before you start, all instances of `Smith` in this documentation should be repla
 Note that the instructions are given in terms of Linux commands. If you are using Mac OSX, the same commands will work, and you should use the [Terminal.app](https://en.wikipedia.org/wiki/Terminal_\(OS_X\)) utility for these commands. If you are using Windows, you should make the file name and within-file edits that we suggest below. We have added special instructions for windows in the final step. If you need help, please contact [Bill Tozier on the Workshop's Slack Team](https://gptp2016.slack.com/messages/@bill_tozier/).
 
 
-1. [Fork this repository on GitHub](https://help.github.com/articles/fork-a-repo/) and then clone or download the forked copy with your own `git` account.
+1. You may either [fork this repository on GitHub](https://help.github.com/articles/fork-a-repo/) and work from that copy, or download/clone the repository and work in a local copy.
 
 2. Use the following files in your local clone of tehe repository to compose your chapter:
   - `chapter.bib`: to create a chapter-specific bibliography file, including _all_ citations you use in your paper
@@ -47,8 +47,9 @@ Note that the instructions are given in terms of Linux commands. If you are usin
   ps2pdf -dEmbedAllFonts=true gpbook.ps gpbook.pdf
   ```
 
-5. All figures must be in EPS format. Do not use pixel-based formats or unusual fonts. Include all files in your chapter folder.
+6. All figures must be in EPS format. Do not use pixel-based formats or unusual fonts. Include all files in your chapter folder.
 
+7. **When you are finished** please save the entire folder containing your edited files into the Google Drive folder we have set up. You should have an email or Slack message with the exact URL to use for submitting your paper. If not, please contact us via email or Slack message. 
 
 ## Notes
 
