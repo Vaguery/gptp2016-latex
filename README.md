@@ -1,67 +1,120 @@
-# Instructions for preparing GPTP-2016 chapters
+# Instructions for preparing GPTP-2016 Proceedings Volume chapters
 
-The page provides instructions for producing latex chapters for the GPTP 2016 proceedings volume, as well as links to style files. **Please follow these very important directions closely.** This will help us _immensely_ and decrease copy editing time enough to make this project feasible.
+This repository includes all the files you will need for preparing your GPTP 2016 Proceedings Volume chapter—including a template you should edit to include your chapter's text—except for image and BibTeX files you will need to provide.
 
-Before you start, all instances of `Smith` in this documentation should be replaced with your lead author's family name (to be clear, `Smith` replaces `YourName` in the files we provide; `YourName` should be your lead author's family name, but for purposes of this documentation, we use `Smith` as an example). Capitalization in this tutorial is _purposeful_. `Smith` and `smith` are different! These step by step directions should guide you through the process without a hitch. Please follow them carefully.
+### Note
 
-**CAPITALIZATION MATTERS!**
+This repository has been updated thoroughly (and simplified, thanks to the folks at Springer Verlag) since the workshop occurred! Please take a moment to give it a try.
 
-Note that the instructions are given in terms of Linux commands. If you are using Mac OSX, the same commands will work, and you should use the [Terminal.app](https://en.wikipedia.org/wiki/Terminal_\(OS_X\)) utility for these commands. If you are using Windows, you should make the file name and within-file edits that we suggest below. We have added special instructions for windows in the final step. If you need help, please contact [Bill Tozier on the Workshop's Slack Team](https://gptp2016.slack.com/messages/@bill_tozier/).
+## Simple start
 
+Just to make sure everything is set up correctly on your machine:
 
-1. You may either [fork this repository on GitHub](https://help.github.com/articles/fork-a-repo/) and work from that copy, or download/clone the repository and work in a local copy.
+1. clone or download this repository; unzip it if necessary
+2. navigate to the folder created, and then into `gptp2016-chapter`
+3. open the file `author.tex` in your LaTeX editor of choice
+4. render the document (all dependencies used by the example chapter, including images and references, are already here in this directory)
+5. Take a moment to look over the document produced. It's loaded with helpful information for your own manuscript preparation!
+6. Look over the documentation provided by Springer, which is stored in `documentation/authinst.pdf`. It's great!
 
-2. Use the following files in your local clone of tehe repository to compose your chapter:
-  - `chapter.bib`: to create a chapter-specific bibliography file, including _all_ citations you use in your paper
-  - `gpbook.tex`: do not edit this; it is the "book wrapper" around your chapter
-  - `chapter.tex`: an example chapter with tips about new package for book. _Replace the contents of this file with the contents of your chapter, keeping what you need for formatting._ That is, change the words and pictures, but _type_ the words and pictures in the way this example chapter indicates.
+OK, so now we both know your LaTeX installation is working! Now:
 
+#### start fresh
 
-3. As you work, rename files you edit:
-  - `chapter.tex` should be renamed to the lead author's last name in all lower case. For example, a paper by John Smith and Donald Duck should be renamed `smith.tex`.
-  - `chapter.bib` should contain all citations you use in your paper. You may want to download a copy of the [most recent `gp-bibliography.bib` file from Bill Langdon's servers](http://www.cs.bham.ac.uk/~wbl/biblio/gp-bibliography.html) as a reference, but please copy any citations from that file into your `chapter.bib` file. Rename `chapter.bib` to `smith.bib`, as with the `.tex` file.
-  - within `chapter.tex`, make sure to change the last lines of the document from:
-  
-    ```latex
-    \bibliographystyle{spbasic}
-    \bibliography{gp-bibliography,chapter}
-    ```
-  to
-    ```latex
-    \bibliographystyle{spbasic}
-    \bibliography{gp-bibliography,smith}
-    ```
-  This will ensure your non-gp-bibliography entries are included in your references.
-  - to render your chapter as you edit it, gpbook.tex file, changing line 47 from `\input{chapter}` to `\input{smith}`
+Make a copy of the file `author.tex`, leaving it where it is for now
 
-4. Do not use additional packages without contacting the editors and asking beforehand. The `usepackage` lines in `gpbook.tex` should provide everything you need, and will not crash the rendering of the entire book. Adding extra packages _may_ crash the rendering of the entire book, and is to be avoided. If your document crashes the rendering of the entire book, we will ask your colleagues to fix it for you.
+#### pick a useful filename
 
-5. To create a pdf of the finished chapter, use the following commands. The resulting pdf will include the bibliography but not the index. Make sure you provide the necessary information for both the bibliography and index in your chapter file! That is, be sure to use `\index{}` and `\citep{}` when composing `chapter.tex`!
-  
-  ```text
-  latex gpbook
-  bibtex gpbook
-  latex gpbook
-  latex gpbook
-  dvips gpbook -o gpbook.ps
-  ps2pdf -dEmbedAllFonts=true gpbook.ps gpbook.pdf
-  ```
+Rename the file to something more useful, like `yourname.tex` for example, or some other name that will help us know whose chapter it is.
 
-6. All figures must be in EPS format. Do not use pixel-based formats or unusual fonts. Include all files in your chapter folder.
+#### pick a useful chapter name
 
-7. **When you are finished** please save the entire folder containing your edited files into the Google Drive folder we have set up. You should have an email or Slack message with the exact URL to use for submitting your paper. If not, please contact us via email or Slack message. 
+at line 39, add the chapter title
 
-## Notes
+#### pick a useful author name
 
-- Please put all your `tex`, `bib`, and `eps` files at one level in the directory with a name that is your primary author's or group's name.
-- Avoid custom extensions.
-- Do not use additional packages without permission.
-- Use `\citep{}` for all citations of papers, use `\cite{}` for citations-as-a-noun. So for example
-  > "While `\cite{bill:2018}` mentions this amazing thing, other authors do not talk about it often `\citep{brian:2019}`."
-  
-  And include all cited works in your own `bib` file!
-- You may use the `gp-bibliography.bib` as a source for many GP papers, but you will need to add additional citations to your own `chapter.bib` file.
-- For figures and table numbers, include a `\label{}` in the tags, and then refer to that figure or table with a `\ref{}`. This is explained in the `chapter.tex` example file, and is not complicated. Just do what it has already shown you how to do.
-- Use `\index{}` for indexing, as explained in `chapter.tex`.
-- If you have questions or problems, feel free to open a GitHub issue, or ask on the [Workshop's Slack channels](http://gptp2016.slack.com). 
+at line 43, add the author names
 
+#### pick a nice place to work
+
+Edit the institutional affiliations appropriately. If you don't have an affiliation, that's OK, but _please_ include the email address of the corresponding author.
+
+#### tell us what you're going to say
+
+Edit the abstract to include a _succinct_ abstract of your work. "Succinct" means five or six sentences, 10–15 lines (rendered), max. If your abstract continues past the first page of the rendered manuscript, guess what? _It's not an abstract, it's a paper._
+
+#### say it
+
+Edit the section headings and the contents of the sections.
+
+Probably you should also take out the example content from the example file. If you want. It's not too bad, but I don't recall anybody talking about it in the workshop, so maybe you'll want to.
+
+#### pictures are fun!
+
+Please be _very careful_ to read the comments and example code regarding figures. Don't add new packages to make fancy figures unless you contact the editors (@Vaguery for example) first. Don't stretch the figures to be in weird places or weird sizes. Don't try to jam too many figures into one chapter. Don't use color. Don't use pixelated images. Don't don't don't.
+
+Make them nice please. _Then_ pictures are fun.
+
+#### citations
+
+In your text, use `\cite{<label>}` for every citation, and make sure every `<label>` is unique in your document.
+
+#### but wait there's more!
+
+Actually, hang on... no there isn't. Please don't use the `appendix` shown in the example template.
+
+#### giving credit where you want to
+
+Traditionally we've relied on Bill Langdon's [GP Bibliography](http://www.cs.bham.ac.uk/~wbl/biblio/). Please feel free to include items you want from that. But but _but_ you must also include any other references not present in that eminent file in your own references file. Edit (or generate using you favorite bibliographic management software) the file `referenc.tex` so that it has _your chapter's references in it_.
+
+Editing bibliographic entries is complicated, but the documentation included in this repository is actually quite good. If you glance at the PDF file generated when you rendered `author.tex` (the original template you copied) you'll see all kinds of amazing useful helpful stuff near the end about references.
+
+You can choose whichever bibliographic standards you like, but I think probably we will use the ones given in the first or second example blocks of the template's bibliography (references 1-5 and 6-10).
+
+If you have trouble rendering the bibliography, please don't spend too much time fixing it to be pretty. We'll do that. Instead
+
+1. get all the references you use in your chapter into `referenc.tex`
+2. don't include any references there that aren't in your chapter
+3. make sure all the bibliographic info is present (full title, full author list, etc) and we will fiddle with the styles later
+
+#### make it right
+
+Please spell check. We will correct obvious misspellings without informing you, but would rather not have to do that.
+
+Please write clearly. We will flag obscure or incorrect grammar if it appears in your manuscript and return it to you, and we'd _really_ rather not do that.
+
+Please refer to the pertinent literature in your contribution. Err on the side of extra references. Imagine somebody who is (1) interested but (2) a complete novice is reading your chapter.
+
+Include all figures as encapsulated postscript `.eps` or PDF files `.pdf` _in the directory with your chapter, at the same level as your text_. Don't put them in a sub-directory, please. Just make sure the files are named reasonably and can be identified if they all get mixed up.
+
+#### make it pretty
+
+We'll do that. But these will certainly help:
+
+Don't use color.
+
+Don't use new or extra fonts.
+
+Don't play bounding box games or check for hbox overflow errors.
+
+Don't hyphenate things unless you really know they need to be hyphenated.
+
+Don't have too many figures.
+
+If you absolutely must must must have a full-page figure, please 
+
+#### make it fit
+
+Eight pages, rendered using this template. Including figures and bibliography.
+
+#### ask questions
+
+Please discuss your manuscript early and often on the Slack channel assigned to it.
+
+#### get it done
+
+Submit revised manuscripts by **15 June, 2016**. To submit your manuscript:
+
+1. rename the folder `gptp2016-chapter` to `gptp2016-chapter-YOURNAMEHERE`
+2. zip the entire folder, and all contents
+3. upload this zip file to the Slack channel assigned to it (just drag it onto the channel input box!); if for some reason you're unable to upload via slack, then email it to Bill Tozier as an attachment with an explanation (and then he will help you figure out how to upload it correctly to the Slack channel, because that's probably what you wanted to do anyway)
