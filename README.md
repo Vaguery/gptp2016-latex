@@ -6,6 +6,16 @@ This repository includes all the files you will need for preparing your GPTP 201
 
 Updated thoroughly (and simplified, thanks to the folks at Springer Verlag) since the workshop occurred! Please take a moment to give it a try.
 
+## Timeline
+
+1. revised manuscripts due June 15, 2016
+2. copy editing will be done while you're all busy at the Big Meeting
+3. manuscripts will be returned to the author(s) as copy-editing is completed. Note this will involve _actual [copy editing](https://en.wikipedia.org/wiki/Copy_editing)_ and thus there may be important clarifications and improvements asked before the manuscript is complete.
+4. all manuscript work should be complete (including changes made in response to copy editing) by August 15, 2016
+5. yes, that said "August 15, 2016"
+6. That means August 15, 2016 is the final deadline. We will be mean. More than a decade of experience informs our promise of meanness on this.
+7. Chapters that have been completed satisfactorily by August 15, 2016 will be submitted to the publisher on September 1, 2016.
+
 ## Simple start
 
 Just to make sure everything is set up correctly on your machine:
@@ -51,7 +61,7 @@ Probably you should also take out the example content from the example file. If 
 
 #### pictures are fun!
 
-Please be _very careful_ to read the comments and example code regarding figures. Don't add new packages to make fancy figures unless you contact the editors (@Vaguery for example) first. Don't stretch the figures to be in weird places or weird sizes. Don't try to jam too many figures into one chapter. Don't use color. Don't use pixelated images. Don't don't don't.
+Please be _very careful_ to read the comments and example code regarding figures. Don't add new packages to make fancy figures unless you contact the editors (Bill Tozier, probably) first. Don't stretch the figures to be in weird places or weird sizes. Don't try to jam too many figures into one chapter. Don't use color. Don't use pixelated images. Don't don't don't.
 
 Make them nice please. _Then_ pictures are fun.
 
