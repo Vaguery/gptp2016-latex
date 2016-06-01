@@ -101,7 +101,7 @@ Don't hyphenate things unless you really know they need to be hyphenated.
 
 Don't have too many figures.
 
-If you absolutely must must must have a full-page figure, please 
+If you absolutely must must must have a full-page figure, please...
 
 #### make it fit
 
