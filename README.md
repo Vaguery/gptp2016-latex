@@ -1,4 +1,4 @@
-# Instructions for preparing GPTP-2016 Proceedings Volume chapters
+# GPTP-2016 Proceedings Volume chapter prep
 
 This repository includes all the files you will need for preparing your GPTP 2016 Proceedings Volume chapter—including a template you should edit to include your chapter's text—except for image and BibTeX files you will need to provide.
 
