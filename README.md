@@ -4,7 +4,7 @@ This repository includes all the files you will need for preparing your GPTP 201
 
 ### Note
 
-This repository has been updated thoroughly (and simplified, thanks to the folks at Springer Verlag) since the workshop occurred! Please take a moment to give it a try.
+Updated thoroughly (and simplified, thanks to the folks at Springer Verlag) since the workshop occurred! Please take a moment to give it a try.
 
 ## Simple start
 
