@@ -115,7 +115,7 @@ If you absolutely must must must have a full-page figure, please...
 
 #### make it fit
 
-Eight pages, rendered using this template. Including figures and bibliography.
+Sixteen pages, rendered using this template. Including figures and bibliography.
 
 #### ask questions
 
