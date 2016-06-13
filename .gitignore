@@ -1,3 +1,10 @@
+## Generated files
+author.pdf
+author.idx
+author.log
+author.aux
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
